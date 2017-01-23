@@ -182,4 +182,58 @@ d = dict(animal="elepnant", weight=12000)
 d = decimal.Decimal('3.14')
 "{0} {0!s} {0!r}".format(d)                 # "3.14 3.14 Decimal('3.14')"
 
+# formating rules
+# { : fill align sign # 0 width, .precision type}
+# fill      any char
+# align     <, >, ^, =
+# sign      force to print '+'
+# #         0b, 0o, 0x
+# 0         replace space with 0
+# width     mininum width
+# ,         grouping
+# .pre      max length for string, max number after . for floating number
+# type      b, c, d, n, o, x, X for int; e, E, f, g, G, n, % for floating
+
+s = "hello"
+"#{0:10}#".format(s)    # '#hello     #'
+'#{0:>10}#'.format(s)   # '#     hello#'
+'#{0:^10}#'.format(s)   # '#  hello   #'
+
+s = "hello world"
+maxwidth = 5
+"{0}".format(s[:maxwidth])      # 'hello'
+"{0:.{1}}".format(s, maxwidth)  # 'hello'
+
+"{0:010}".format(12345)         # '0000012345'
+"{0:010}".format(-12345)        # '-000012345'
+
+"{0:*<10}".format(12345)        # '12345*****'
+"{0:*>10}".format(12345)        # '*****12345'
+"{0:*^10}".format(12345)        # '**12345***'
+
+x = 123
+y = -123
+"[{0: }] [{1: }]".format(x, y)  # '[ 123] [-123]'
+"[{0:+}] [{1:+}]".format(x, y)  # '[+123] [-123]'
+"[{0:-}] [{1:-}]".format(x, y)  # '[123] [-123]'
+
+"{0:,}".format(123456789)       # '123,456,789'
+"{0:*>13,}".format(123456789)   # '**123,456,789'
+
+r = 5
+area = (r ** 2) * math.pi
+"[{0:12.2e}]".format(area)      # '[    7.85e+01]'
+"[{0:12.2E}]".format(area)      # '[    7.85E+01]'
+"[{0:12.2f}]".format(area)      # '[       78.54]'
+"[{0:12.2F}]".format(area)      # '[       78.54]'
+"[{0:*>12.2e}]".format(area)    # '[****7.85e+01]'
+"[{0:*>+12.2e}]".format(area)   # '[***+7.85e+01]'
+
+d = decimal.Decimal(str(math.pi))
+"{:,.6f}".format(d)             #  '3.141593'
+
+c1 = 4.75917 + 1.2042j
+c2 = 4.75917 - 1.2042j
+"{0.real:.3f}{0.imag:+.3f}".format(c1)  # '4.759+1.204'
+"{0.real:.3f}{0.imag:+.3f}".format(c2)  # '4.759-1.204'
 
