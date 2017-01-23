@@ -67,5 +67,119 @@ f or t              # True
 ################################################################################
 # Floating type 
 
+# float
+s = 3.14.hex()      # '0x1.91eb851eb851fp+1'
+f = float.fromhex(s)# 3.14
+t = f.hex()         # '0x1.91eb851eb851fp+1'
+
+import math
+math.pi * (5 ** 2)  # 78.53981633974483
+math.modf(13.732)   # (0.7319999999999993, 13.0)
+
+# complex
+3.5+2j              # (3.5+2j)
+0.5j                # 0.5j
+4+0j                # (4+0j)
+-1-3.7j             # (-1-3.7j)
+
+# decimal
+import decimal
+
+x = 1.23
+y = 3.21
+x + y               # 4.4399999999999995
+
+x = decimal.Decimal('1.23')
+y = decimal.Decimal('3.21')
+x + y               # Decimal('4.44')
+
 ################################################################################
 # String type
+
+'hello world'       # 'hello world'
+"this is a test"    # 'this is a test'
+"""first line
+second line"""      # 'first line\nsecond line'
+""""quote" \n"""    # '"quote" \n'
+
+# compare
+a = 'apple'
+b = 'banana'
+
+a > b               # False
+a >= b              # False
+a == b              # False
+a != b              # True
+a <= b              # True
+a < b               # True
+
+# slice
+str = '0123456789'
+
+str[3]              # '3'
+str[3:7]            # '3456'
+str[3:7:2]          # '35'
+str[::2]            # '02468'
+str[-3]             # '7'
+str[-3:-7]          # ''
+str[-3:-7:-2]       # '75'
+str[::-1]           # '9876543210'
+
+# operation
+fruits = ['apple', 'banana', 'cherry']
+
+" ".join(fruits)    # 'apple banana cherry'
+"<>".join(fruits)   # 'apple<>banana<>cherry'
+"".join(fruits)     # 'applebananacherry'
+
+s = '=' * 5         # '====='
+s *= 3              # '==============='
+
+s = 'hello'
+s.capitalize()      # 'Hello'
+s.center(10, '*')   # '**hello***'
+s.count('l')        # 2
+s.endswith('lo')    # True
+s.endswith('he')    # False
+s.find('ll')        # 2
+s.index('ll')       # 2
+s.isalnum()         # True
+s.isalpha()         # True
+s.isdigit()         # False
+s.islower()         # True
+s.ljust(10, '_')    # 'hello_____'
+s.rjust(10, '_')    # '_____hello'
+s.lower()           # 'hello'
+s.replace('e','E')  # 'hEllo'
+s.split('l')        # ['he', '', 'o']
+s.startswith('lo')  # False
+s.stratswith('he')  # True
+s.strip('ho')       # 'ell'
+s.swapcase()        # 'HELLO'
+s.title()           # 'Hello'
+s.upper()           # 'Hello'
+s.zfill(10)         # '00000hello'
+
+# formating
+
+# variables
+"{0} {1}".format(123, "ABC")                # '123 ABC'
+"{num} {str}".format(num=123, str="ABC")    # '123 ABC'
+
+# list
+list1 = [123, 456]
+list2 = ['ABC', 'DEF']
+"{0[1]} {1[0]}".format(list1, list2)        # '456 ABC'
+
+# dictionary
+d = dict(animal="elepnant", weight=12000)
+"The {0[animal]} weights {0[weight]}kg".format(d)   # 'The elepnant weights 12000kg'
+
+# object
+"PI={0.pi}".format(math)                    # 'PI=3.14159265359'
+
+# convert
+d = decimal.Decimal('3.14')
+"{0} {0!s} {0!r}".format(d)                 # "3.14 3.14 Decimal('3.14')"
+
+
