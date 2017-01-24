@@ -68,7 +68,7 @@ nums = [n for n in range(1, 50)
         if n % 7 == 0 or n % 13 == 0]
 
 ################################################################################
-# Set
+# Set (mutable)
 
 s = {7, 'veil', 0, -29, ('x', 11), 'sun', frozenset({8, 4, 7}), 913}
 len(s)  # 8
@@ -78,6 +78,10 @@ for item in s:
 
 # operations
 s = {1, 2, 3}
+
+len(s)          # 3
+2 in s          # True
+
 s.add(3)        # s={1, 2, 3}
 s.add(4)        # s={1, 2, 3, 4}
 s.clear()       # s=set()
@@ -106,7 +110,26 @@ s ^ t           # {1, 4}        # symmetric difference
 s | t           # {1, 2, 3, 4}  # union
 
 ################################################################################
-# Map
+# Map (mutable)
+
+d1 = {'A': 1, 'B': 2, 'C': 3}   # {'C': 3, 'B': 2, 'A': 1}
+d2 = {'B': 2, 'C': 3, 'A': 1}   # {'C': 3, 'B': 2, 'A': 1}
+
+'A' in d1   # True
+'D' in d1   # False
+
+# key, value
+for item in d1.items():
+    print(item[0], item[1])
+
+for key, value in d1.items():
+    print(key, value)
+
+for key in d1.keys():
+    print(key)
+
+for value in d1.values():
+    print(value)
 
 ################################################################################
 # iteration
