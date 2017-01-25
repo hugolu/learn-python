@@ -90,7 +90,7 @@ s = {1,2,3}
 s.discard(2)    # s={1,3}
 s.discard(4)    # s={1,3}
 s.remove(3)     # s={1}
-#s.remove(4)     # KeyError Exception
+#s.remove(4)    # KeyError Exception
 
 s = {1, 2, 3}
 s.pop()         # 1
@@ -131,5 +131,45 @@ for key in d1.keys():
 for value in d1.values():
     print(value)
 
+# operations
+d1 = {'A': 1, 'B': 2, 'C': 3}   # d1={'A': 1, 'C': 3, 'B': 2}
+
+d2 = d1.copy()                  # d2={'A': 1, 'C': 3, 'B': 2}
+d2.clear()                      # d2={}
+d2.fromkeys("DEF", 0)           # {'F': 0, 'D': 0, 'E': 0}
+
+d1.get('A')                     # 1
+d1.get('D')                     # None
+d1.get('D', 0)                  # 0
+
+d1.items()                      # dict_items([('A', 1), ('C', 3), ('B', 2)])
+d1.keys()                       # dict_keys(['A', 'C', 'B'])
+d1.values()                     # dict_values([1, 3, 2])
+
+d1.pop('A')                     # 1
+d1                              # {'C': 3, 'B': 2}
+#d1.pop('D')                    # KeyError Exception
+d1.pop('D', 0)                  # 0
+
+d1.popitem()                    # ('C', 3)
+d1                              # {'B': 2}
+d1.setdefault('D', 0)           # 0
+d1                              # {'D': 0, 'B': 2}
+
+d1 = {'A': 1, 'B': 2, 'C': 3}
+d2 = {'B': 2, 'C': 4, 'D': 4}
+d1.update(d2)
+d1                              #  {'A': 1, 'C': 4, 'D': 4, 'B': 2}
+
+d1 = {'A': 1, 'B': 2, 'C': 3}
+d2 = {'B': 2, 'C': 4, 'D': 4}
+d1.items() & d2.items()         # {('B', 2)}
+d1.items() | d2.items()         # {('A', 1), ('C', 4), ('D', 4), ('C', 3), ('B', 2)}
+d1.items() - d2.items()         # {('A', 1), ('C', 3)}
+d1.items() ^ d2.items()         # {('A', 1), ('D', 4), ('C', 3), ('C', 4)}
+
+# ordered dictionary
+d = collections.OrderedDict([('z', -1), ('e', -19), ('k', 17)])
+d
 ################################################################################
 # iteration
