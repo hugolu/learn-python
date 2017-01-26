@@ -173,3 +173,35 @@ d = collections.OrderedDict([('z', -1), ('e', -19), ('k', 17)])
 d
 ################################################################################
 # iteration
+
+nums = [1, 2, 3, 4, 5]
+sum = 0
+for n in nums:
+    sum += n
+
+print(sum)      # 15
+
+# operations
+s = [1, 2, 3]
+t = [4 ,5, 6]
+
+s + t           # [1, 2, 3, 4, 5, 6]
+s * 3           # [1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+2 in s          # True
+2 in t          # False
+
+all(s)          # True
+any(s)          # True
+s.append(0)     # s=[1, 2, 3, 0]
+all(s)          # False
+any(s)          # True
+
+len(s)          # 4
+max(s)          # 3
+min(s)          # 0
+
+s = list(range(1, 10, 3)) # s=[1, 4, 7]
+for i in reversed(s):
+    print(i)
+
