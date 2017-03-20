@@ -1,4 +1,6 @@
 *.py[co]
 .ipynb_checkpoints/
 mytest/
+*.png
+*.svg
 __pycache__/
