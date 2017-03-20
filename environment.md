@@ -1,5 +1,18 @@
 # Environment
 
+## IPython notebook
+Ref: [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html)
+
+```
+$ jupyter notebook
+    ...(skipped)
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=46f0d72e6e316d787f1c59b07935f5e8b609fbfd8ef2807f
+```
+
+<img src="picture/jupyter-notebook.png" width="600" />
+
 ## Docker
 
 Pull a docker image @host
