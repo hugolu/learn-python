@@ -6,7 +6,7 @@ Official site: http://seaborn.pydata.org/
 import seaborn as sns
 ```
 
-## 控制图片外观
+## [控制图片外观](http://seaborn.pydata.org/tutorial/aesthetics.html)
 
 函数 | 说明
 ---|---
@@ -33,10 +33,13 @@ sns.plotting_context()
 sns.set_context("notebook", font_scale=1.5, rc={"lines.linewidth": 2.5})
 ```
 
-## 选择调色板
+## [选择调色板](http://seaborn.pydata.org/tutorial/color_palettes.html)
 
 函数 | 说明
 ---|---
-`seaborn.color_palette()` | 设定调色板，返回定义的颜色
-`seaborn.set_palette()` | 使用 seaborn 调色板当做 matplotlib 的颜色
-
+[`seaborn.palplot()`](http://seaborn.pydata.org/generated/seaborn.palplot.html?highlight=palplot#seaborn.palplot) | Plot the values in a color palette as a horizontal array.
+[`seaborn.color_palette()`](http://seaborn.pydata.org/generated/seaborn.color_palette.html#seaborn.color_palette) | Return a list of colors defining a color palette.
+[`seaborn.cubehelix_palette()`](http://seaborn.pydata.org/generated/seaborn.cubehelix_palette.html#seaborn.cubehelix_palette) | Make a sequential palette from the cubehelix system.
+[`seaborn.light_palette()`](http://seaborn.pydata.org/generated/seaborn.light_palette.html#seaborn.light_palette) | Make a sequential palette that blends from light to color.
+[`seaborn.dark_palette()`](http://seaborn.pydata.org/generated/seaborn.dark_palette.html#seaborn.dark_palette) | Make a sequential palette that blends from dark to color.
+[`seaborn.set_palette()`](http://seaborn.pydata.org/generated/seaborn.set_palette.html#seaborn.set_palette) | Set the matplotlib color cycle using a seaborn palette.
