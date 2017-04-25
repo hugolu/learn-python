@@ -81,3 +81,26 @@ Diverging | 分叉调色板 - 用来显示数据分布从相对低点到高点�
 [`seaborn.barplot()`](http://seaborn.pydata.org/generated/seaborn.barplot.html#seaborn.barplot) | Show point estimates and confidence intervals as rectangular bars.
 [`seaborn.pointplot()`](http://seaborn.pydata.org/generated/seaborn.pointplot.html#seaborn.pointplot) | Show point estimates and confidence intervals using scatter plot glyphs.
 [`seaborn.factorplot()`](http://seaborn.pydata.org/generated/seaborn.factorplot.html#seaborn.factorplot) | Draw a categorical plot onto a FacetGrid.
+
+## [格状子图](http://seaborn.pydata.org/tutorial/axis_grids.html)
+
+函数 | 说明
+---|---
+[`seaborn.FacetGrid()`](http://seaborn.pydata.org/generated/seaborn.FacetGrid.html#seaborn.FacetGrid) | Subplot grid for plotting conditional relationships.
+[`seaborn.PairGrid()`](http://seaborn.pydata.org/generated/seaborn.PairGrid.html#seaborn.PairGrid) | Subplot grid for plotting pairwise relationships in a dataset.
+[`seaborn.pairplot()`](http://seaborn.pydata.org/generated/seaborn.pairplot.html#seaborn.pairplot) | Plot pairwise relationships in a dataset.
+
+```
+g = sns.FacetGrid(tips, col="sex", hue="smoker")
+g.map(plt.scatter, "total_bill", "tip", alpha=.7)
+g.add_legend();
+```
+![](http://seaborn.pydata.org/_images/axis_grids_12_0.png)
+
+```
+g = sns.PairGrid(iris)
+g.map_upper(plt.scatter)
+g.map_lower(sns.kdeplot, cmap="Blues_d")
+g.map_diag(sns.kdeplot, lw=3, legend=False);
+```
+![](http://seaborn.pydata.org/_images/axis_grids_50_0.png)
