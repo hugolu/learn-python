@@ -51,3 +51,13 @@ Diverging | 分叉调色板 - 用来显示数据分布从相对低点到高点�
 [`seaborn.dark_palette()`](http://seaborn.pydata.org/generated/seaborn.dark_palette.html#seaborn.dark_palette) | Make a sequential palette that blends from dark to color.
 [`seaborn.diverging_palette()`](http://seaborn.pydata.org/generated/seaborn.diverging_palette.html#seaborn.diverging_palette) | Make a diverging palette between two HUSL colors.
 [`seaborn.set_palette()`](http://seaborn.pydata.org/generated/seaborn.set_palette.html#seaborn.set_palette) | Set the matplotlib color cycle using a seaborn palette.
+
+## [离散数据可视化](http://seaborn.pydata.org/tutorial/distributions.html)
+
+函数 | 说明
+---|---
+[`seaborn.distplot()`](http://seaborn.pydata.org/generated/seaborn.distplot.html#seaborn.distplot) | Flexibly plot a univariate distribution of observations.
+[`seaborn.kdeplot()`](http://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn.kdeplot) | Fit and plot a univariate or bivariate kernel density estimate.
+[`seaborn.rugplot`](http://seaborn.pydata.org/generated/seaborn.rugplot.html#seaborn.rugplot) | Plot datapoints in an array as sticks on an axis.
+[`seaborn.jointplot()`](http://seaborn.pydata.org/generated/seaborn.jointplot.html#seaborn.jointplot) | Draw a plot of two variables with bivariate and univariate graphs. (Scatter, Hexbin, KDE)
+[`seaborn.pairplot()`](http://seaborn.pydata.org/generated/seaborn.pairplot.html#seaborn.pairplot) | Plot pairwise relationships in a dataset.
