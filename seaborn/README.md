@@ -62,6 +62,13 @@ Diverging | 分叉调色板 - 用来显示数据分布从相对低点到高点�
 [`seaborn.jointplot()`](http://seaborn.pydata.org/generated/seaborn.jointplot.html#seaborn.jointplot) | Draw a plot of two variables with bivariate and univariate graphs. (Scatter, Hexbin, KDE, Regression)
 [`seaborn.pairplot()`](http://seaborn.pydata.org/generated/seaborn.pairplot.html#seaborn.pairplot) | Plot pairwise relationships in a dataset.
 
+```
+import seaborn as sns; sns.set(style="ticks", color_codes=True)
+iris = sns.load_dataset("iris")
+g = sns.pairplot(iris, hue="species"))
+```
+![](http://seaborn.pydata.org/_images/seaborn-pairplot-2.png)
+
 ## [线性关系可视化](http://seaborn.pydata.org/tutorial/regression.html)
 
 函数 | 说明
@@ -88,7 +95,6 @@ Diverging | 分叉调色板 - 用来显示数据分布从相对低点到高点�
 ---|---
 [`seaborn.FacetGrid()`](http://seaborn.pydata.org/generated/seaborn.FacetGrid.html#seaborn.FacetGrid) | Subplot grid for plotting conditional relationships.
 [`seaborn.PairGrid()`](http://seaborn.pydata.org/generated/seaborn.PairGrid.html#seaborn.PairGrid) | Subplot grid for plotting pairwise relationships in a dataset.
-[`seaborn.pairplot()`](http://seaborn.pydata.org/generated/seaborn.pairplot.html#seaborn.pairplot) | Plot pairwise relationships in a dataset.
 
 ```
 g = sns.FacetGrid(tips, col="sex", hue="smoker")
