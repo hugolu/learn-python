@@ -1,6 +1,7 @@
 # Seaborn: statistical data visualization
 
-Official site: http://seaborn.pydata.org/
+- Official site: http://seaborn.pydata.org/
+- API: http://seaborn.pydata.org/api.html
 
 ```
 import seaborn as sns
