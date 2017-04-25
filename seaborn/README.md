@@ -59,5 +59,25 @@ Diverging | 分叉调色板 - 用来显示数据分布从相对低点到高点�
 [`seaborn.distplot()`](http://seaborn.pydata.org/generated/seaborn.distplot.html#seaborn.distplot) | Flexibly plot a univariate distribution of observations.
 [`seaborn.kdeplot()`](http://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn.kdeplot) | Fit and plot a univariate or bivariate kernel density estimate.
 [`seaborn.rugplot`](http://seaborn.pydata.org/generated/seaborn.rugplot.html#seaborn.rugplot) | Plot datapoints in an array as sticks on an axis.
-[`seaborn.jointplot()`](http://seaborn.pydata.org/generated/seaborn.jointplot.html#seaborn.jointplot) | Draw a plot of two variables with bivariate and univariate graphs. (Scatter, Hexbin, KDE)
+[`seaborn.jointplot()`](http://seaborn.pydata.org/generated/seaborn.jointplot.html#seaborn.jointplot) | Draw a plot of two variables with bivariate and univariate graphs. (Scatter, Hexbin, KDE, Regression)
 [`seaborn.pairplot()`](http://seaborn.pydata.org/generated/seaborn.pairplot.html#seaborn.pairplot) | Plot pairwise relationships in a dataset.
+
+## [线性关系可视化](http://seaborn.pydata.org/tutorial/regression.html)
+
+函数 | 说明
+---|---
+[`seaborn.regplot()`](http://seaborn.pydata.org/generated/seaborn.regplot.html#seaborn.regplot) | Plot data and a linear regression model fit.
+[`seaborn.lmplot()`](http://seaborn.pydata.org/generated/seaborn.lmplot.html#seaborn.lmplot) | Plot data and regression model fits across a FacetGrid.
+[`seaborn.residplot()`](http://seaborn.pydata.org/generated/seaborn.residplot.html#seaborn.residplot) | Plot the residuals of a linear regression.
+
+## [分类数据可视化](http://seaborn.pydata.org/tutorial/categorical.html)
+
+函数 | 说明
+---|---
+[`seaborn.stripplot()`](http://seaborn.pydata.org/generated/seaborn.stripplot.html#seaborn.stripplot) | Draw a scatterplot where one variable is categorical.
+[`seaborn.swarmplot()`](http://seaborn.pydata.org/generated/seaborn.swarmplot.html#seaborn.swarmplot) | Draw a categorical scatterplot with non-overlapping points.
+[`seaborn.boxplot()`](http://seaborn.pydata.org/generated/seaborn.boxplot.html#seaborn.boxplot) | Draw a box plot to show distributions with respect to categories.
+[`seaborn.violinplot()`](http://seaborn.pydata.org/generated/seaborn.violinplot.html#seaborn.violinplot) | Draw a combination of boxplot and kernel density estimate.
+[`seaborn.barplot()`](http://seaborn.pydata.org/generated/seaborn.barplot.html#seaborn.barplot) | Show point estimates and confidence intervals as rectangular bars.
+[`seaborn.pointplot()`](http://seaborn.pydata.org/generated/seaborn.pointplot.html#seaborn.pointplot) | Show point estimates and confidence intervals using scatter plot glyphs.
+[`seaborn.factorplot()`](http://seaborn.pydata.org/generated/seaborn.factorplot.html#seaborn.factorplot) | Draw a categorical plot onto a FacetGrid.
